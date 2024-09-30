@@ -8,7 +8,7 @@ output_file = 'merged_reddit_posts.csv'
 # Get a list of all CSV files in the directory
 csv_files = [f for f in os.listdir(input_dir) if f.endswith('.csv')]
 
-#Boolean if output file already exists
+# Boolean if output file already exists
 output_exists = os.path.exists(output_file)
 
 # Open the output file for writing
@@ -26,4 +26,7 @@ with open(output_file, 'a' if output_exists else 'w', newline='', encoding='utf-
             for row in reader:
                 writer.writerow(row)
 
-print(f"All posts have been merged into '{output_file}'.")
+        # Delete the individual CSV file after its contents have been appended
+        os.remove(os.path.join(input_dir, csv_file))
+
+print(f"All posts have been merged into '{output_file}' and individual files have been deleted.")
