@@ -9,7 +9,7 @@ csv file for each of unique textual block, whether it be a main post or a follow
 Data was collected via scraper in a randomized collection method, with only text blocks
 that met a predetermined search criteria being collected.  
 
-This Dataset consists of [[[NUMBER]]] seperate elements
+This Dataset consists of 1199 seperate elements
 
 # How to replicate data collection
 
@@ -28,7 +28,7 @@ row, and the columns being 'title', 'selftext', and 'created_utc.'
 
 
 # Time of collection
-[[[Place timestamps of work here!!!]]]
+9-30-2024, 2:10-2:22 pm--collected 1199 posts.
 
 # Annotation time estimate
 10 - 25 seconds
