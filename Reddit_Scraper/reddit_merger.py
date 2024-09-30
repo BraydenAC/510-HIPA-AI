@@ -8,10 +8,15 @@ output_file = 'merged_reddit_posts.csv'
 # Get a list of all CSV files in the directory
 csv_files = [f for f in os.listdir(input_dir) if f.endswith('.csv')]
 
+#Boolean if output file already exists
+output_exists = os.path.exists(output_file)
+
 # Open the output file for writing
-with open(output_file, 'w', newline='', encoding='utf-8') as outfile:
+with open(output_file, 'a' if output_exists else 'w', newline='', encoding='utf-8') as outfile:
     writer = csv.writer(outfile)
-    writer.writerow(['title', 'selftext', 'created_utc'])  # Write the header
+
+    if not output_exists:
+        writer.writerow(['title', 'selftext', 'created_utc'])  # Write the header
 
     # Iterate through each CSV file and write its contents to the output file
     for csv_file in csv_files:
