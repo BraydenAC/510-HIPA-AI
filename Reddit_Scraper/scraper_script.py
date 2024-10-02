@@ -29,10 +29,10 @@ os.makedirs(output_dir, exist_ok=True)
 keywords = ["patient", "physician", "doctor", "case"]
 
 # Collect posts from the 'nursing' and 'medicine' subreddits
-subreddit = reddit.subreddit('nursing+medicine+doctor+physicianassistant+nursing')
+subreddit = reddit.subreddit('nursing+nursepractitioner')
 posts = []
 
-for post in subreddit.hot(limit=3):
+for post in subreddit.hot(limit=500):
     if not post.is_self:  # Check if the post is a self-post (text-only)
         continue
     if contains_keywords(post.title, keywords) or contains_keywords(post.selftext, keywords):
