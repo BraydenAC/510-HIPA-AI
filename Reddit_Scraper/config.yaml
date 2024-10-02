@@ -10,7 +10,7 @@ site_dir: "default"
 annotation_task_name: "HIPA-AI 100 Posts"
 port: 8000
 data_files:
-  - "C:\\Users\\Zoiya\\OneDrive\\Courses\\Master's Degree\\ARI 510\\Project\\merged_reddit_posts.csv"
+  - "C:\Users\Zoiya\100_merged_file.csv"
 item_properties:
   id_key: "created_utc"
   text_key: "selftext"
