@@ -1,0 +1,22 @@
+NOTE: You must have python and pip installed.
+To use potato:
+1. Follow the instructions to download potato:
+  a. https://github.com/davidjurgens/potato
+  b. git clone https://github.com/davidjurgens/potato.git
+  c. pip install -r requirements.txt (you may have to alter the path to find the file)
+  d. (alternatively, follow their first set of instructions)
+2. Download the merged_reddit_posts.csv
+3. Download our config.yaml file
+  a. It helps to place it inside the potato folder in a folder called config_folder, as this is what potato will look for.
+  b. Open the config.yaml file and change output_annotation_dir to where you want the results to go if needed.
+  c. Change the data_files location to wherever you saved your merged_reddit_posts.csv
+4. Use this script but update it with the path to your config file to start annotating: 
+    potato start "C:\YOUR_FILE_LOCATION\potato\config_folder\config.yaml" -p 8000
+5. Type this link into your browser: 
+    http://localhost:8000/
+6. Create a username and password
+7. Start annotating!
+                                                            
+                                                            Contact us at zmorell@umich.edu or brayclou@umich.edu for questions
+
+  
