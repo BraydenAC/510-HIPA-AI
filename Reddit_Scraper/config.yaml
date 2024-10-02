@@ -1,0 +1,57 @@
+{
+    "server_name": "potato annotator",
+    "user_config": {
+        "allow_all_users": true,
+        "users": []
+    },
+    "alert_time_each_instance": 10000000,
+    "html_layout": "default",
+    "base_html_template": "default",
+    "header_file": "default",
+    "site_dir": "default",
+    "annotation_task_name": "HIPA-AI",
+    "port": 8000,
+    "data_files": [
+        "/home/brayden/Desktop/School/ARI 510/Main Project/Github/510-HIPA-AI/Reddit_Scraper/merged_reddit_posts.csv"
+    ],
+    "item_properties": {
+        "id_key": "created_utc",
+        "text_key": "selftext",
+        "contex_key": "title"
+    },
+    "annotation_codebook_url": "https://onedrive.live.com/edit?id=BCC68F887DBAAF32!108574&resid=BCC68F887DBAAF32!108574&ithint=file%2cdocx&authkey=!AGStfUi7ejuqSGs&wdo=2&cid=bcc68f887dbaaf32",
+    "output_annotation_dir": "/home/brayden/Desktop/School/ARI 510/Main Project/Github/510-HIPA-AI/Reddit_Scraper/Annotations",
+    "output_annotation_format": "csv",
+    "annotation_schemes": [
+        {
+            "labels": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "labels": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "labels": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "labels": [
+                "yes",
+                "no"
+            ]
+        },
+        {
+            "labels": [
+                "yes",
+                "no"
+            ]
+        }
+    ]
+}
