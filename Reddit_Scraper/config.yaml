@@ -8,15 +8,15 @@ base_html_template: "default"
 header_file: "default"
 site_dir: "default"
 annotation_task_name: "HIPA-AI 100 Posts"
-port: 8000
+port: 8080
 data_files:
-  - "C:\Users\Zoiya\100_merged_file.csv"
+  - "C:\\Users\\Zoiya\\100_merged_file.csv"
 item_properties:
   id_key: "created_utc"
   text_key: "selftext"
   context_key: "title"
 annotation_codebook_url: "https://1drv.ms/b/s!AjKvun2Ij8a8htpUew_kBR_M_ByVxA?e=CoOPeU"
-output_annotation_dir: "C:\\Users\\Zoiya\\OneDrive\\Courses\\Master's Degree\\ARI 510\\Project\\Annotation results"
+output_annotation_dir: "C:\\Users\\Zoiya\\OneDrive\\Courses\\Master''s Degree\\ARI 510\\Project\\Annotation results"
 output_annotation_format: "csv"
 annotation_schemes:
   - annotation_type: "radio"
