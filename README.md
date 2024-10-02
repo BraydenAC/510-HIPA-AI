@@ -9,7 +9,7 @@ csv file for each of unique textual block, whether it be a main post or a follow
 Data was collected via scraper in a randomized collection method, with only text blocks
 that met a predetermined search criteria being collected.  
 
-This Dataset consists of 2084 seperate elements
+This Dataset consists of 2084 separate elements
 
 # How to replicate data collection
 
