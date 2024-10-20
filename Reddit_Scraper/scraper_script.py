@@ -16,9 +16,9 @@ def contains_keywords(text, keywords):
 reddit = praw.Reddit(
     client_id='3GlV4o_NdjsbuFARNIcTug',
     client_secret='izjIRlCWazYWMM4q7CUEQWqX08PA6A',
-    user_agent='HIPAAI/0.0.1/Fearless-Remote-855',
-    username='Fearless-Remote-855',
-    password=':r8G5ArnrdwrRy7'
+    user_agent='HIPAAI/0.0.1/username',
+    username='username',
+    password='password'
 )
 
 # Create a directory to save the CSV files
