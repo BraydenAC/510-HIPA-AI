@@ -2,8 +2,12 @@
 # Purpose: To take the now-annotated csv file of 100 datapoints, and resolve any disagreement between annotators
 #10/25/2024
 
+import pandas as pd
 
 #Load in Compiled Annotations(annotated_instances.csv
+csv_file = 'Compiled Annotations(annotated_instances).csv'
+csv_input = pd.read_csv(csv_file, encoding='ISO-8859-1')
+print(csv_input)
 
 #Split information into 3 matrices; the input, annotator 1, and annotator 2
 #Initialize an output matrix that correct annotations will be stored in
