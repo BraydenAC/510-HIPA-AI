@@ -8,16 +8,19 @@ prediction_dir = os.path.join('/app/input/', 'res')
 score_dir = '/app/output/'
 
 print('Reading prediction')
-prediction = np.genfromtxt(os.path.join(prediction_dir, 'prediction'), delimiter=',', skip_header=1)
+prediction = np.genfromtxt(os.path.join(prediction_dir, 'prediction.csv'), delimiter=',', skip_header=1)
 truth = np.genfromtxt(os.path.join(reference_dir, 'test_label.csv'), delimiter=',', skip_header=1)
 with open(os.path.join(prediction_dir, 'metadata.json')) as f:
     duration = json.load(f).get('duration', -1)
 
+prediction = prediction.astype(int)
+truth = truth.astype(int)
+
 print('Checking Accuracy')
-accuracy = f1_score(truth, prediction)
+f1 = f1_score(truth, prediction, pos_label=1)
 print('Scores:')
 scores = {
-    'f1_score': f1_score,
+    'f1_score': f1,
     'duration': duration
 }
 print(scores)
