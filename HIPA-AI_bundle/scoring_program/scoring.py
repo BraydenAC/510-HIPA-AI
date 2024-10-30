@@ -1,23 +1,23 @@
 import json
 import os
 import numpy as np
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score
 
 reference_dir = os.path.join('/app/input/', 'ref')
 prediction_dir = os.path.join('/app/input/', 'res')
 score_dir = '/app/output/'
 
 print('Reading prediction')
-prediction = np.genfromtxt(os.path.join(prediction_dir, 'prediction'))
-truth = np.genfromtxt(os.path.join(reference_dir, 'testing_label'))
+prediction = np.genfromtxt(os.path.join(prediction_dir, 'prediction'), delimiter=',', skip_header=1)
+truth = np.genfromtxt(os.path.join(reference_dir, 'test_label.csv'), delimiter=',', skip_header=1)
 with open(os.path.join(prediction_dir, 'metadata.json')) as f:
     duration = json.load(f).get('duration', -1)
 
 print('Checking Accuracy')
-accuracy = accuracy_score(truth, prediction)
+accuracy = f1_score(truth, prediction)
 print('Scores:')
 scores = {
-    'accuracy': accuracy,
+    'f1_score': f1_score,
     'duration': duration
 }
 print(scores)
